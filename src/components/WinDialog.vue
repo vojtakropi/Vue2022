@@ -3,7 +3,7 @@
     <v-row class="dialog-content" justify="center">
       <v-card class="text-center">
         <v-card-title class="headline font-weight-bold">You win!</v-card-title>
-        <v-card-text>Want to play minesweeper again?</v-card-text>
+        <v-card-text>Want to play again?</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
