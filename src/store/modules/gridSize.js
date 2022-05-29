@@ -1,6 +1,6 @@
 const state = {
     buttonText: "",
-    sizes: [8, 10, 12],
+    sizes: [8, 10, 12, 20, 25],
     isSelected: false,
     gridSize: 0
 };

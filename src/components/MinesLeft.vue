@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <p class="mb-1">Mines Left</p>
+    <p class="mb-1">Zbývá bomb</p>
     <p class="font-weight-bold headline mb-1 font-color-indigo" v-text="minesLeft"></p>
   </v-container>
 </template>

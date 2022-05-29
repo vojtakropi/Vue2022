@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <p class="mb-1">Time</p>
+    <p class="mb-1">ČAS</p>
     <p class="font-weight-bold headline font-color-red">{{getTime}}</p>
   </v-container>
 </template>

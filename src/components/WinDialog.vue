@@ -2,8 +2,8 @@
   <div v-if="isWin" class="dialog-bg">
     <v-row class="dialog-content" justify="center">
       <v-card class="text-center">
-        <v-card-title class="headline font-weight-bold">You win!</v-card-title>
-        <v-card-text>Want to play again?</v-card-text>
+        <v-card-title class="headline font-weight-bold">VYHRÁL JSI, GTATULUJI</v-card-title>
+        <v-card-text>ZKUSÍŠ ŠTĚSTÍ ZNOVU ?</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn

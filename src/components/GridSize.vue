@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <p class="mb-1">Size</p>
+    <p class="mb-1">Klikni a změň si velikost hrací plochy!</p>
     <v-menu bottom origin="top center" transition="scale-transition" :offset-y="true">
       <template v-slot:activator="{ on }">
         <v-btn text color="primary" v-on="on" v-text="buttonText" class="font-weight-bold headline"></v-btn>

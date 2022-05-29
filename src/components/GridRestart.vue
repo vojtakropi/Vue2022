@@ -1,6 +1,6 @@
 <template>
   <v-container class="text-center">
-    <p class="mb-1">Restart</p>
+    <p class="mb-1">Zkusit znovu</p>
     <v-btn
       text
       color="warning"

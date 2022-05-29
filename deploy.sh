@@ -2,7 +2,7 @@
 set -e
 
 # build
-yarn build
+npm run build
 
 # navigate into the build output directory
 cd dist
@@ -14,6 +14,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/naufaliqbal/minesweeper-vue.git master:gh-pages
+git push -f https://github.com/vojtakropi/Vue2022 master:gh-pages
 
 cd -
