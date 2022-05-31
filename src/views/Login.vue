@@ -2,7 +2,7 @@
 <div class="context">
 <h2>Přihlášení</h2>
 
-<form method="post">
+<form>
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
@@ -11,7 +11,7 @@
     <label for="psw"><b>Heslo</b></label>
     <input type="password" placeholder="Zadej heslo" name="psw" required>
         
-    <button type="submit">Přihlásit</button>
+    <button @click="send">Přihlásit</button>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
@@ -24,6 +24,12 @@
     export default {
         data() {
             return {}
+        },
+        methods:{
+            send(){
+              this.$store.commit('increment')
+              console.log(this.$store.state.logedin)
+            }
         }
     }
 </script>

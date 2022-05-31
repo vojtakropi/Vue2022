@@ -1,6 +1,5 @@
 <template>
   <v-app style="min-width:360px;">
-    <button v-on:click="t">Greet</button>
     <v-content v-show="a">
       <v-row>
         <octocat />
@@ -24,7 +23,7 @@ export default {
   name: "App",
   data(){
     return {
-      a : false
+      a : this.$store.state.logedin
   }
   },
   components: {
@@ -33,17 +32,11 @@ export default {
     GridMenuRight,
     Octocat,
   },
-  computed:{
-  logedinn(){
-    return this.$store.state.logedin;
-  }
-}, methods:{
+ methods:{
  t(){
-   console.log(this.a)
-   this.$store.commit('increment')
    this.a = this.$store.state.logedin
   }
-}
+},
 }
 
 </script>
