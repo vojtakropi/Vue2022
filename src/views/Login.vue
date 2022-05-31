@@ -23,15 +23,16 @@
 <script>
     export default {
         data() {
-            return {}
+            return {};
         },
         methods:{
             send(){
-              this.$store.commit('increment')
-              console.log(this.$store.state.logedin)
+              this.$store.commit("increment");
+              console.log(this.$store.state.logedin);
+              this.$router.push("home"); 
             }
         }
-    }
+    };
 </script>
 
 <style>

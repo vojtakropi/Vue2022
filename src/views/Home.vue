@@ -24,7 +24,7 @@ export default {
   data(){
     return {
       a : this.$store.state.logedin
-  }
+  };
   },
   components: {
     GridMenuLeft,
@@ -34,10 +34,10 @@ export default {
   },
  methods:{
  t(){
-   this.a = this.$store.state.logedin
+   this.a = this.$store.state.logedin;
   }
 },
-}
+};
 
 </script>
 

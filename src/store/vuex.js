@@ -16,7 +16,7 @@ export default new Vuex.Store({
   },
   mutations: {
     increment (state) {
-      state.logedin = !state.logedin
+      state.logedin = !state.logedin;
     }
   },
   strict: debug,

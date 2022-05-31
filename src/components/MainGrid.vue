@@ -16,7 +16,8 @@
               'opened': col.show, 
               'bomb':col.bomb && col.show && !col.flagged, 
               'flagged-bomb': col.bomb && col.show && col.flagged}, 
-              'square-card']"
+              'square-card',
+              'flex-center']"
               elevation="4"
               outlined
             >

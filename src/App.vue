@@ -2,14 +2,14 @@
   <div id="app">
     <div id="nav">
       <div v-show="!a">
-      <router-link to="/login">Login</router-link> |
+      <router-link to="/">Login</router-link> |
       <router-link to="/signup">Signup</router-link>|
       <router-link to="/scoreboard">Scoreboard</router-link>|
       </div>
     <div v-show="a">
      <button @click="logof"></button>
     </div>
-    <router-link style="size: 15px;" to="/">Home</router-link> |
+    <router-link style="size: 15px;" to="/home">Home</router-link> |
     </div>
     <router-view/>
   </div>
@@ -20,18 +20,18 @@ export default {
   data() {
     return{
       a : this.$store.state.logedin
-    }
+    };
   },
   methods:{
     logof(){
-       this.$store.commit('increment')
+       this.$store.commit("increment");
     },
   },  watch: {
     a: function(value){
-      this.a = value
+      this.a = value;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

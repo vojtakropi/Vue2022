@@ -23,14 +23,14 @@
 <script>
     export default {
         data() {
-            return {}
+            return {};
         },
         methods:{
             send(){
-                this.$store.commit('increment')
+                this.$store.commit("increment");
             }
         }
-    }
+    };
 </script>
 
 <style>
