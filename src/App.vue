@@ -3,7 +3,8 @@
     <div id="nav">
       <div v-show="!a">
       <router-link to="/login">Login</router-link> |
-      <router-link to="/signup">Signup</router-link>
+      <router-link to="/signup">Signup</router-link>|
+      <router-link to="/scoreboard">Scoreboard</router-link>|
       </div>
     <div v-show="a">
      <button @click="logof"></button>
