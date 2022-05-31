@@ -1,6 +1,7 @@
 <template>
   <v-app style="min-width:360px;">
-    <v-content>
+    <button v-on:click="t">Greet</button>
+    <v-content v-show="a">
       <v-row>
         <octocat />
       </v-row>
@@ -21,13 +22,30 @@ import Octocat from "../components/Octocat";
 
 export default {
   name: "App",
+  data(){
+    return {
+      a : false
+  }
+  },
   components: {
     GridMenuLeft,
     MainGrid,
     GridMenuRight,
-    Octocat
+    Octocat,
+  },
+  computed:{
+  logedinn(){
+    return this.$store.state.logedin;
   }
-};
+}, methods:{
+ t(){
+   console.log(this.a)
+   this.$store.commit('increment')
+   this.a = this.$store.state.logedin
+  }
+}
+}
+
 </script>
 
 <style lang="scss">

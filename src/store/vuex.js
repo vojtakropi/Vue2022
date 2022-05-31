@@ -11,12 +11,20 @@ Vue.use(Vuex);
 const debug = process.env.NODE_ENV !== "production";
 
 export default new Vuex.Store({
+  state:{
+    logedin : false
+  },
+  mutations: {
+    increment (state) {
+      state.logedin = !state.logedin
+    }
+  },
   strict: debug,
   modules: {
     mainGame,
     gridSize,
     gridPattern,
     gridSquare,
-    gridTimer
+    gridTimer,
   }
 });

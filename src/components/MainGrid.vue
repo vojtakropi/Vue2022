@@ -3,6 +3,7 @@
     <v-row justify="center" align="center">
       <p class="display-1 my-6">Vue2022-Kropacek</p>
     </v-row>
+    
     <v-row no-gutters v-for="(row, row_idx) in pattern" :key="row_idx" justify="center">
       <template v-for="(col, col_idx) in row">
         <v-hover v-slot:default="{ hover }" :key="col_idx">
@@ -15,8 +16,7 @@
               'opened': col.show, 
               'bomb':col.bomb && col.show && !col.flagged, 
               'flagged-bomb': col.bomb && col.show && col.flagged}, 
-              'square-card', 
-              'flex-center']"
+              'square-card']"
               elevation="4"
               outlined
             >
