@@ -26,5 +26,10 @@ export default new Router({
       name: "scoreboard",
       component: () => import("./views/Scoreboard.vue")
     },
+    {
+      path: "/pswchange",
+      name: "pswchange",
+      component: () => import("./views/Changepasswd.vue")
+    },
   ]
 });

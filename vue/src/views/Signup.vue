@@ -6,10 +6,10 @@
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Zadej username" name="uname" required>
+    <input v-model="uname" placeholder="Zadej username" id="uname" required>
 
     <label for="psw"><b>Heslo</b></label>
-    <input type="password" placeholder="Zadej heslo" name="psw" required>
+    <input v-model="psw" placeholder="Zadej heslo" id="psw" required>
         
     <button @click="send">Registrovat</button>
   </div>
@@ -21,13 +21,24 @@
 </div>
 </template>
 <script>
+import axios from 'axios'
     export default {
         data() {
-            return {};
+            return {
+              psw  : '',
+              uname : '',
+              dataset : ''
+            };
         },
         methods:{
             send(){
+                axios
+              .put('http://localhost:8000/users/put?username='+this.uname+'&passwd=' + this.psw)
+              .then((response) => {
+                this.dataset = response.data
+              })
                 this.$store.commit("increment");
+                this.$router.push("home"); 
             }
         }
     };

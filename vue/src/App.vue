@@ -5,6 +5,7 @@
       <router-link to="/">Login</router-link> |
       <router-link to="/signup">Signup</router-link>|
       <router-link to="/scoreboard">Scoreboard</router-link>|
+      <router-link to="/pswchange">Changepassword</router-link>|
       </div>
     <div v-show="a">
      <button @click="logof"></button>

@@ -2,23 +2,47 @@
   <table class="styled-table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Points</th>
+            <th>Jméno</th>
+            <th>čas</th>
+            <th>Obtížnost</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Dom</td>
-            <td>6000</td>
-        </tr>
+      <score
+      v-for="people in dataset"
+      :key="people"
+      :time = people
+      />
     </tbody>
 </table>
 </template>
 
 <script>
+import Score from "../components/Score.vue"
+import axios from 'axios'
 export default {
-
-};
+    components:{
+      Score
+    },
+    data(){
+      return{
+          dataset : ''
+      }
+    },
+    methods:{
+     
+    }, mounted(){
+        axios
+        .get('http://localhost:8000/users/get')
+        .then((response) => {
+          console.log(response.data)
+          this.dataset = response.data
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+      }
+}
 </script>
 
 <style>
